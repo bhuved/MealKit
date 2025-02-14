@@ -1,0 +1,6 @@
+insert into publisher (name,contactemail)
+values ('Random house', 'randomhouse@email.com'),
+('Stable Shed', 'stablehouse@email.com'),
+('Crazy condo', 'crazycondo@email.com')
+
+INSERT INTO Book (Title,ISBN,PublisherId)VALUES ('Night School','34324342342',1),('Dark Elf','34355634',1),('Learn C#','454545445',3)SELECT * FROM Bookalter table book add price decimal(8,2) not null default 0update book set price = 25.95 where id=1update book set price = 20.95 where id=2update book set price = 105.95 where id=3select title from book where price > 100select * from book where isbn like '343%'select * from book join publisher on book.publisherid= publisher.idselect title ,isbn, price,name as publishername, contactemail as PublisherEmailfrom book join publisher on book.publisherid= publisher.idselect title ,isbn, price,name as publishername, contactemail as PublisherEmailfrom book left join publisher on book.publisherid= publisher.idinsert into book (title, isbn, price)values ('Self Taught Scott', '5675', 11.56)insert into book (title, isbn, price)values ('garbage', '5675', 11.56)select * from bookdelete book where id=5
